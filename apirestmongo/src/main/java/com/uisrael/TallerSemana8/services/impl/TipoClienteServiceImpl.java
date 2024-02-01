@@ -10,11 +10,11 @@ import com.uisrael.TallerSemana8.repository.ITipoClienteRepository;
 import com.uisrael.TallerSemana8.services.ITipoClienteServices;
 
 @Service
-public class TipoClienteServiceImpl implements ITipoClienteServices{
-	
+public class TipoClienteServiceImpl implements ITipoClienteServices {
+
 	@Autowired
 	private ITipoClienteRepository repo;
-	
+
 	@Override
 	public void insertarTipo(TipoCliente nTipoCliente) {
 		// TODO Auto-generated method stub
@@ -33,6 +33,22 @@ public class TipoClienteServiceImpl implements ITipoClienteServices{
 			System.out.println("Tipo de cliente no listado" + e);
 		}
 		return null;
+	}
+
+	@Override
+	public boolean actualizarTipo(TipoCliente t) {
+
+		return repo.save(t) != null;
+	}
+
+	@Override
+	public void eliminarTipo(String id) {
+		// TODO Auto-generated method stub
+		try {
+			repo.deleteById(id);
+		} catch (Exception e) {
+			System.out.println("Error al eliminar Tipo de cliente " + e);
+		}
 	}
 
 }

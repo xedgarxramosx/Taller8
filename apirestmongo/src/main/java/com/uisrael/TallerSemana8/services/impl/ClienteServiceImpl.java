@@ -25,5 +25,17 @@ public class ClienteServiceImpl implements IClienteServices{
 		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
+
+	@Override
+	public boolean actualizarCliente(Cliente nCliente) {
+		// TODO Auto-generated method stub
+		return repo.save(nCliente)!=null;
+	}
+
+	@Override
+	public void eliminarCliente(String id) {
+		// TODO Auto-generated method stub
+		repo.deleteById(id);
+	}
 	
 }

@@ -6,5 +6,10 @@ import com.uisrael.TallerSemana8.model.Cliente;
 
 public interface IClienteServices {
 	public boolean insertarCliente(Cliente nCliente);
-	public List<Cliente> listarCliente ();
+
+	public List<Cliente> listarCliente();
+	
+	public boolean actualizarCliente(Cliente nCliente);
+	
+	public void eliminarCliente(String id);
 }
