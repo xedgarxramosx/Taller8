@@ -17,7 +17,6 @@ public class TipoClienteServiceImpl implements ITipoClienteServices {
 
 	@Override
 	public void insertarTipo(TipoCliente nTipoCliente) {
-		// TODO Auto-generated method stub
 		try {
 			repo.save(nTipoCliente);
 		} catch (Exception e) {
@@ -43,7 +42,6 @@ public class TipoClienteServiceImpl implements ITipoClienteServices {
 
 	@Override
 	public void eliminarTipo(String id) {
-		// TODO Auto-generated method stub
 		try {
 			repo.deleteById(id);
 		} catch (Exception e) {
