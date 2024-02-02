@@ -19,8 +19,8 @@ public class TipoClienteServiceImpl implements ITipoClienteServices {
 	public void insertarTipo(TipoCliente nTipoCliente) {
 		try {
 			repo.save(nTipoCliente);
-		} catch (Exception e) {
-			System.out.println("Tipo de cliente no insertado" + e);
+		} catch (Exception ex) {
+			System.out.println("El tipo de cliente no se guardo: " + ex);
 		}
 	}
 
@@ -28,8 +28,8 @@ public class TipoClienteServiceImpl implements ITipoClienteServices {
 	public List<TipoCliente> listarTipo() {
 		try {
 			return repo.findAll();
-		} catch (Exception e) {
-			System.out.println("Tipo de cliente no listado" + e);
+		} catch (Exception ex) {
+			System.out.println("El tipo de cliente no se listo: " + ex);
 		}
 		return null;
 	}
@@ -44,8 +44,8 @@ public class TipoClienteServiceImpl implements ITipoClienteServices {
 	public void eliminarTipo(String id) {
 		try {
 			repo.deleteById(id);
-		} catch (Exception e) {
-			System.out.println("Error al eliminar Tipo de cliente " + e);
+		} catch (Exception ex) {
+			System.out.println("Error al eliminar el tipo de cliente: " + ex);
 		}
 	}
 
